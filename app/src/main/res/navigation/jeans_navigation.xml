@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/jeans_navigation"
+    app:startDestination="@id/jeansFragment">
+
+
+    <fragment
+        android:id="@+id/jeansFragment"
+        android:name="com.example.priem.ui.jeans.JeansFragment"
+        android:label="JeansFragment"
+        tools:layout="@layout/fragment_jeans">
+        <action
+            android:id="@+id/action_jeansFragment_to_jeansDescriptionFragment"
+            app:destination="@id/jeansDescriptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jeansDescriptionFragment"
+        android:name="com.example.priem.ui.description.JeansDescriptionFragment"
+        android:label="JeansDescriptionFragment"
+        tools:layout="@layout/fragment_jeans_description">
+        <action
+            android:id="@+id/action_jeansDescriptionFragment_to_jeansFragment"
+            app:destination="@+id/jeansFragment"/>
+    </fragment>
+</navigation>
